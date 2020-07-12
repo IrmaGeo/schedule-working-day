@@ -99,7 +99,7 @@
                 $(this).val() === "NULL" ||
                 $(this).hasClass("past")
               ) {
-                alert("input parameter is emty, please enter value!!!");
+                alert("input parameter is emty, or time is passed!!!");
                 $(this).val("");
               } else {
                 localStorage.setItem($(this).attr("data-index"), $(this).val());
