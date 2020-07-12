@@ -83,6 +83,13 @@
           }
         }
 
+        // if data in localstorage not belong same days, clear localstorage
+        if (moment().format("MMM Do YY") !== localStorage.getItem("date")) {
+          console.log("note");
+          localStorage.clear();
+          localStorage.setItem("date", moment().format("MMM Do YY"));
+        }
+
         // 4. Task WHEN I click the save button for that timeblock
         // THEN the text for that event is saved in local storage
         // check elemets. if input class is .past or input parameter is empty pop up alert "dont allow to change past hour, or element should not be emty"
